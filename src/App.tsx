@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import api from './services/api';
+
+interface Question {
+  id: string;
+  question: string;
+  answer: string;
+}
 
 function App() {
+  const[questions, setQuestions] = useState<Question[]>([]);
+
+  useEffect(() => {
+    api.get('/posts').then(response => { setQuestions(response.data) });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {questions.map(question => (
+        <>
+          <h2 key={question.id}>{question.question}</h2>
+          <p>{question.answer}</p>
+        </>
+      ))}
+    </>    
   );
 }
 
