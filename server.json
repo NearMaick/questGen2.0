@@ -1,74 +1,77 @@
 {
-  "questions": [
+  "subjects": [
     {
       "id": 1,
-      "question": "json-server",
-      "answer": "typicode"
+      "subject": "Matemática financeira"
     },
     {
       "id": 2,
-      "question": "web-server",
-      "answer": "maick"
-    },
-    {
-      "id": 3,
-      "question": "dxvxdvxdvxdvddddddfcxcvxcv",
-      "answer": "outro teste"
-    },
-    {
-      "id": 4,
-      "question": "xvdxdvxv",
-      "answer": "outro teste"
-    },
-    {
-      "id": 5,
-      "question": "yyyyyyyyyyyy",
-      "answer": "outro teste"
-    },
-    {
-      "id": 6,
-      "question": "ooooooooooooo",
-      "answer": "outro teste"
-    },
-    {
-      "id": 7,
-      "question": "lolololololo",
-      "answer": "outro teste"
-    },
-    {
-      "id": 8,
-      "question": "aaaaaaaaaaa",
-      "answer": "outro teste"
-    },
-    {
-      "id": 9,
-      "question": "tttttttttttttt",
-      "answer": "outro teste"
-    },
-    {
-      "id": 10,
-      "question": "ççççççç",
-      "answer": "outro teste"
-    },
-    {
-      "id": 11,
-      "question": "maick",
-      "answer": "outro teste"
-    },
-    {
-      "id": 12,
-      "question": "souza",
-      "answer": "outro teste"
-    }
+      "subject": "Análise Financeira"
+    }   
   ],
-  "comments": [
+
+  "professors": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Maick Souza"
+    },
+    {
+      "id": 2,
+      "name": "Waldir Noberto"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+
+  "university": [
+    {
+      "id": 1,
+      "name": "Universidade Científica",
+      "logo": "https://avatars2.githubusercontent.com/u/49838202?s=460&u=87f1bd097ae6a80491278dd8f6130e2dd2808723&v=4"
+    },
+    {
+      "id": 2,
+      "name": "Universidade do Conhecimento",
+      "logo": "https://avatars2.githubusercontent.com/u/821402?s=460&u=4d32abc87f1627fc90b2c3c11418cbdfc357f52a&v=4"
+    }
+  ],
+
+  "essayQuestions": [
+    {
+      "id": 1,
+      "level": 2,
+      "question": "Para tomar essa decisão, o presidente da empresa solicitou a um consultor a análise do investimento a ser feito para cada um dos três projetos possíveis, visando a identificar aquele que proporcionará melhor retorno. Um método adequado e que poderá ser utilizado pelo consultor nessa análise é o(a )",
+      "subject_id": 1
+    },
+    {
+      "id": 2,
+      "level": 3,
+      "question": "Sabendo que a taxa mínima de atratividade é de 10% a.a., a alternativa",
+      "subject_id": 2
+    }   
+  ],
+
+  "choiceQuestions": [
+    {
+      "id": 1,
+      "question": "Para tomar essa decisão, o presidente da empresa solicitou a um consultor a análise do investimento a ser feito para cada um dos três projetos possíveis, visando a identificar aquele que proporcionará melhor retorno. Um método adequado e que poderá ser utilizado pelo consultor nessa análise é o(a )",
+      "answer_a": "apresenta valor presente líquido positivo.",
+      "answer_b": "a TIR for menor do que a TMA",
+      "answer_c": "apresenta taxa interna de retorno maior que 10% a.a.",
+      "answer_d": "é economicamente viável à taxa mínima de atratividade de 10% a.a..",
+      "answer_e": "é economicamente viável à taxa mínima de atratividade de 12% a.a..",
+      "correct_answer": "answer_b",
+      "subject_id": 2
+    },
+    {
+      "id": 2,
+      "subject": "Análise Financeira",
+      "question": "(Centec – 2015) Considerando os conceitos da taxa interna de retorno (TIR) e da taxa mínima de atratividade (TMA), deve-se aceitar um projeto como economicamente viável quando:",
+      "answer_a": "a TIR for maior do que zero",
+      "answer_b": "a TIR for menor do que a TMA",
+      "answer_c": "a TMA for maior do que zero",
+      "answer_d": "a TIR for maior do que o valor presente líquido",
+      "answer_e": "a TIR for maior do que a TMA",
+      "correct_answer": "answer_e",
+      "subject_id": 1
+    }   
+  ]
 }
