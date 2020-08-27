@@ -1,3 +1,3 @@
 import styled from 'styled-components';
 
-export const Cotainer = styled.div``;
+export const Container = styled.div``;

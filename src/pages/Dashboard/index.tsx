@@ -1,5 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import api from '../../services/api';
+import React from 'react';
+// import api from '../../services/api';
+
+import { Link } from 'react-router-dom';
+import { Container } from './styles';
 
 interface Question {
   id: string;
@@ -8,42 +11,13 @@ interface Question {
 }
 
 const Dashboard: React.FC = () => {
-  const [question, setQuestion] = useState('');
-  const [questions, setQuestions] = useState<Question[]>([]);
-
-  useEffect(() => {
-    api.get('/essayQuestions').then(response => {
-      setQuestions(response.data);
-    });
-  }, []);
-
-  const handleAddQuestion = useCallback(() => {
-    api.post('/essayQuestions', {
-      id: questions.length + 1,
-      question,
-      answer: 'outro teste',
-    });
-  }, [question, questions]);
-
   return (
-    <>
-      {questions.map(essayQuestion => (
-        <li key={essayQuestion.id}>
-          <h2>{essayQuestion.question}</h2>
-        </li>
-      ))}
-      <form onSubmit={handleAddQuestion}>
-        <input
-          type="text"
-          name="question"
-          value={question}
-          onChange={e => {
-            setQuestion(e.target.value);
-          }}
-        />
-        <button type="submit">Enviar</button>
-      </form>
-    </>
+    <Container>
+      <h1>Bem vindo, professor Maick Souza</h1>
+      <h2>Para cadastrar uma questão no sistema</h2>
+      <h2>Para listar uma questão no sistema;</h2>
+      <h2>Para cadastrar o logo e a instituição no sistema;</h2>
+    </Container>
   );
 };
 

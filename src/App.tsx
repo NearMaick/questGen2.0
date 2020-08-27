@@ -1,10 +1,10 @@
 import React from 'react';
-import Dashboard from './pages/Dashboard';
+import Routes from './Routes';
 
 const App: React.FC = () => {
   return (
     <>
-      <Dashboard />
+      <Routes />
     </>
   );
 };
