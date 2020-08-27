@@ -7,9 +7,8 @@
     {
       "id": 2,
       "subject": "Análise Financeira"
-    }   
+    }
   ],
-
   "professors": [
     {
       "id": 1,
@@ -20,7 +19,6 @@
       "name": "Waldir Noberto"
     }
   ],
-
   "university": [
     {
       "id": 1,
@@ -33,7 +31,6 @@
       "logo": "https://avatars2.githubusercontent.com/u/821402?s=460&u=4d32abc87f1627fc90b2c3c11418cbdfc357f52a&v=4"
     }
   ],
-
   "essayQuestions": [
     {
       "id": 1,
@@ -46,9 +43,13 @@
       "level": 3,
       "question": "Sabendo que a taxa mínima de atratividade é de 10% a.a., a alternativa",
       "subject_id": 2
-    }   
+    },
+    {
+      "id": 3,
+      "question": "sdaawdadas",
+      "answer": "outro teste"
+    }
   ],
-
   "choiceQuestions": [
     {
       "id": 1,
@@ -72,6 +73,6 @@
       "answer_e": "a TIR for maior do que a TMA",
       "correct_answer": "answer_e",
       "subject_id": 1
-    }   
+    }
   ]
 }
