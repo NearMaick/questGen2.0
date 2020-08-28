@@ -15,7 +15,9 @@ const Dashboard: React.FC = () => {
     <Container>
       <h1>Bem vindo, professor Maick Souza</h1>
       <h2>Para cadastrar uma questão no sistema</h2>
-      <h2>Para listar uma questão no sistema;</h2>
+      <h2>
+        <Link to="/question-find">Para listar uma questão no sistema;</Link>
+      </h2>
       <h2>Para cadastrar o logo e a instituição no sistema;</h2>
     </Container>
   );
