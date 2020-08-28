@@ -9,6 +9,16 @@
       "subject": "Análise Financeira"
     }
   ],
+  "course": [
+    {
+      "id": 1,
+      "course": "Administração"
+    },
+    {
+      "id": 2,
+      "course": "Gestão Financeira"
+    }
+  ],
   "professors": [
     {
       "id": 1,
@@ -36,13 +46,15 @@
       "id": 1,
       "level": 2,
       "question": "Para tomar essa decisão, o presidente da empresa solicitou a um consultor a análise do investimento a ser feito para cada um dos três projetos possíveis, visando a identificar aquele que proporcionará melhor retorno. Um método adequado e que poderá ser utilizado pelo consultor nessa análise é o(a )",
-      "subject_id": 1
+      "subject_id": 1,
+      "course_id": 1
     },
     {
       "id": 2,
       "level": 3,
       "question": "Sabendo que a taxa mínima de atratividade é de 10% a.a., a alternativa",
-      "subject_id": 2
+      "subject_id": 2,
+      "course_id": 1
     },
     {
       "id": 3,
