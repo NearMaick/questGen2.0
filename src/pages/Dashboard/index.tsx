@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { Container } from './styles';
+import Menu from '../../components/Menu';
 
 interface Question {
   id: string;
@@ -13,6 +14,7 @@ interface Question {
 const Dashboard: React.FC = () => {
   return (
     <Container>
+      <Menu />
       <h1>Bem vindo, professor Maick Souza</h1>
       <h2>Para cadastrar uma questão no sistema</h2>
       <h2>

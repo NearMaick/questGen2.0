@@ -1,27 +1,35 @@
 import React, { useRef, useCallback } from 'react';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
+import { useHistory } from 'react-router-dom';
 import { Container, SearchFormContainer, SearchIdContainer } from './styles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import Menu from '../../components/Menu';
 
 interface QuestionFormData {
   question: string;
+  listQuestionId: string;
 }
 
 const QuestionFind: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const history = useHistory();
 
   const handleSearchSubmit = useCallback((data: QuestionFormData) => {
     console.log(data);
   }, []);
 
-  const handleSearchIdSubmit = useCallback((data: QuestionFormData) => {
-    console.log(data);
-  }, []);
+  const handleSearchIdSubmit = useCallback(
+    (data: QuestionFormData) => {
+      history.push(`question-list/${data.listQuestionId}`);
+    },
+    [history],
+  );
 
   return (
     <Container>
+      <Menu />
       <h2>Pesquisar por</h2>
       <SearchFormContainer>
         <Form ref={formRef} onSubmit={handleSearchSubmit}>

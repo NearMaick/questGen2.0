@@ -55,11 +55,6 @@
       "question": "Sabendo que a taxa mínima de atratividade é de 10% a.a., a alternativa",
       "subject_id": 2,
       "course_id": 1
-    },
-    {
-      "id": 3,
-      "question": "sdaawdadas",
-      "answer": "outro teste"
     }
   ],
   "choiceQuestions": [
@@ -72,6 +67,7 @@
       "answer_d": "é economicamente viável à taxa mínima de atratividade de 10% a.a..",
       "answer_e": "é economicamente viável à taxa mínima de atratividade de 12% a.a..",
       "correct_answer": "answer_b",
+      "level": 2,
       "subject_id": 2
     },
     {
@@ -84,7 +80,20 @@
       "answer_d": "a TIR for maior do que o valor presente líquido",
       "answer_e": "a TIR for maior do que a TMA",
       "correct_answer": "answer_e",
+      "level": 2,
       "subject_id": 1
+    }
+  ],
+  "questionsGenerate": [
+    {
+      "id": 4,
+      "essayQuestion": [
+        { "id": 1 },
+        { "id": 2 },
+        { "id": 1 },
+        { "id": 2 },
+        { "id": 1 }
+      ]
     }
   ]
 }
