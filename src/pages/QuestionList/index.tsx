@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable camelcase */
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../../services/api';
 
@@ -14,18 +15,37 @@ interface Question {
 }
 
 const QuestionList: React.FC = () => {
-  // const [result, setResult] = useState([]);
-
+  const [listQuestions, setListQuestions] = useState<Question[]>([]);
   const { id } = useParams();
+
+  useEffect(() => {
+    async function loadListQuestions() {
+      const questionsIds = await api.get(`/questionsGenerate/${id}`);
+      const listQuestionsIds = questionsIds.data.essayQuestion;
+      const identifiers = listQuestionsIds.map(
+        (idQuestion: { id: string }) => idQuestion.id,
+      );
+      const list = identifiers.map(
+        async (questionId: number): Promise<Question> => {
+          const response = await api.get(`/essayQuestions/${questionId}`);
+          return response.data;
+        },
+      );
+      Promise.all(list).then((values: any[]) => setListQuestions(values));
+    }
+    loadListQuestions();
+  }, [id]);
 
   return (
     <Container>
       <Menu />
-      {/* {result.map((essayQuestion, index) => (
-        <li key={index}>
-          <h2>{essayQuestion}</h2>
-        </li>
-      ))} */}
+      {listQuestions.map((question, index) => {
+        return (
+          <div key={index}>
+            <h3>{question.question}</h3>
+          </div>
+        );
+      })}
     </Container>
   );
 };
